@@ -8,5 +8,39 @@
     <artifactId>test-maven-project</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <packaging>jar</packaging>
+    <name>Learning Maven</name>
+    <description>This is a project to learn what is Maven for and common Maven features</description>
+    <url>https://github.com/lehansun/What-is-Maven-for</url>
+    <licenses>
+        <license>
+            <name>Apache License</name>
+            <comments>Version 2.0, January 2004</comments>
+            <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+        </license>
+    </licenses>
+
+    <organization>
+        <url>epam.com</url>
+        <name>EPAM</name>
+    </organization>
+
+    <developers>
+        <developer>
+            <name>Aliaksei Vazdusevich</name>
+            <organization>EPAM.Brest.courses</organization>
+            <email>avozdusevich@gmail.com</email>
+        </developer>
+    </developers>
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>3.7.1</version>
+            </plugin>
+        </plugins>
+    </build>
+
 
 </project>
