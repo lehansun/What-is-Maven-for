@@ -42,9 +42,8 @@
     </properties>
 
 
-    <dependencyManagement>
 
-        <dependencies>
+    <dependencies>
 
             <!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
             <dependency>
@@ -53,9 +52,7 @@
                 <version>${spring.version}</version>
             </dependency>
 
-        </dependencies>
-
-    </dependencyManagement>
+    </dependencies>
 
 
 
