@@ -1,5 +1,8 @@
 package com.epam.brest.courses.animals.entities;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Dog {
     private String name;
 
@@ -8,6 +11,7 @@ public class Dog {
     }
 
     public Dog() {
+        this.name = "Bean-dog";
     }
 
     public String getName() {

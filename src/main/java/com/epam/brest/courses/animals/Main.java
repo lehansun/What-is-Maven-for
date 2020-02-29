@@ -16,7 +16,7 @@ public class Main {
                 new AnnotationConfigApplicationContext(MyConfig.class);
 
         Cat cat = context.getBean(Cat.class);
-        Dog dog = (Dog) context.getBean("getDog");
+        Dog dog = (Dog) context.getBean("dog");
         Parrot parrot = context.getBean("parrot-kesha", Parrot.class);
         WeekDay weekDay = context.getBean(WeekDay.class);
 
