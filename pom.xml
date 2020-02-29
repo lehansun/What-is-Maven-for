@@ -7,11 +7,11 @@
     <groupId>com.epam.brest.courses</groupId>
     <artifactId>test-maven-project</artifactId>
     <version>1.0-SNAPSHOT</version>
-
     <packaging>jar</packaging>
-    <name>Learning Maven</name>
 
-    <description>This is a project to learn what is Maven for and common Maven features</description>
+    <name>Learning Maven and Spring</name>
+
+    <description>This is a project to learn what is Maven and Spring for and common Maven and Spring features</description>
     <url>https://github.com/lehansun/What-is-Maven-for</url>
     <licenses>
         <license>
@@ -34,29 +34,19 @@
         </developer>
     </developers>
 
+
     <properties>
-        <spring.version>5.2.3.RELEASE</spring.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.8</java.version>
+        <spring.version>5.2.4.RELEASE</spring.version>
     </properties>
 
-
-    <dependencies>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
-        </dependency>
-    </dependencies>
 
     <dependencyManagement>
 
         <dependencies>
 
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-core</artifactId>
-                <version>${spring.version}</version>
-            </dependency>
-
+            <!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-context</artifactId>
@@ -67,19 +57,27 @@
 
     </dependencyManagement>
 
-    <profiles>
-        <profile>
-            <id>special-profile</id>
-            <build>
-                <directory>special-target</directory>
-            </build>
-            <activation>
-                <property>
-                    <name>env.special</name>
-                </property>
-            </activation>
-        </profile>
-    </profiles>
 
+
+    <build>
+        <plugins>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>3.8.2</version>
+            </plugin>
+
+        </plugins>
+    </build>
 
 </project>
