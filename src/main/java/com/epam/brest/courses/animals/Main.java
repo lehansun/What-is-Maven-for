@@ -1,5 +1,6 @@
 package com.epam.brest.courses.animals;
 
+import com.epam.brest.courses.animals.configs.MyConfig;
 import com.epam.brest.courses.animals.entities.Cat;
 import com.epam.brest.courses.animals.entities.Dog;
 import com.epam.brest.courses.animals.entities.Parrot;
@@ -11,10 +12,10 @@ public class Main {
 
         // создаем пустой спринговый контекст, который будет искать свои бины по аннотациям в указанном пакете
         ApplicationContext context =
-                new AnnotationConfigApplicationContext("com.epam.brest.courses.animals.entities");
+                new AnnotationConfigApplicationContext(MyConfig.class);
 
         Cat cat = context.getBean(Cat.class);
-        Dog dog = (Dog) context.getBean("dog");
+        Dog dog = (Dog) context.getBean("getDog");
         Parrot parrot = context.getBean("parrot-kesha", Parrot.class);
 
         System.out.println(cat.getName());
