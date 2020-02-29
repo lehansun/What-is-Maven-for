@@ -10,6 +10,7 @@
 
     <packaging>jar</packaging>
     <name>Learning Maven</name>
+
     <description>This is a project to learn what is Maven for and common Maven features</description>
     <url>https://github.com/lehansun/What-is-Maven-for</url>
     <licenses>
@@ -65,27 +66,6 @@
         </dependencies>
 
     </dependencyManagement>
-
-    <build>
-
-        <plugins>
-            <plugin>
-                <artifactId>maven-site-plugin</artifactId>
-                <version>3.7.1</version>
-            </plugin>
-        </plugins>
-
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-compiler-plugin</artifactId>
-                    <version>3.7.0</version>
-                </plugin>
-            </plugins>
-        </pluginManagement>
-
-    </build>
 
     <profiles>
         <profile>
