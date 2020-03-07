@@ -12,7 +12,6 @@ public class MusicPlayer {
     }
 
     public MusicPlayer() {
-
     }
 
     public void playMusic() {
@@ -42,4 +41,5 @@ public class MusicPlayer {
     public void setVolume(int volume) {
         this.volume = volume;
     }
+
 }
