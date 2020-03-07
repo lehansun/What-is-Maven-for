@@ -13,6 +13,8 @@
 
     <bean id="musicPlayer"
         class="com.epam.brest.courses.MusicPlayer">
-        <constructor-arg ref="musicBean"/>
+        <property name="music" ref="musicBean"/>
+        <property name="name" value="DefaultName"/>
+        <property name="volume" value="50"/>
     </bean>
 </beans>
