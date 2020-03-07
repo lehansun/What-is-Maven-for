@@ -11,4 +11,8 @@
           class="com.epam.brest.courses.RockMusic">
     </bean>
 
+    <bean id="musicPlayer"
+        class="com.epam.brest.courses.MusicPlayer">
+        <constructor-arg ref="musicBean"/>
+    </bean>
 </beans>
