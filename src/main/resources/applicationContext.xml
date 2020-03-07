@@ -9,15 +9,32 @@
 
     <context:property-placeholder location="classpath:musicPlayer.properties"/>
 
-    <bean id="musicBean"
+    <bean id="rockBean"
           class="com.epam.brest.courses.RockMusic">
     </bean>
 
     <bean id="musicPlayer"
-        class="com.epam.brest.courses.MusicPlayer">
-        <property name="music" ref="musicBean"/>
+          class="com.epam.brest.courses.MusicPlayer">
+
+        <property name="musicList">
+
+            <list>
+                <ref bean="popBean"/>
+                <ref bean="classicBean"/>
+                <ref bean="rockBean"/>
+            </list>
+
+        </property>
 
         <property name="name" value="${musicPlayer.name}"/>
         <property name="volume" value="${musicPlayer.volume}"/>
+    </bean>
+
+    <bean id="classicBean"
+          class="com.epam.brest.courses.ClassicMusic">
+    </bean>
+
+    <bean id="popBean"
+          class="com.epam.brest.courses.PopMusic">
     </bean>
 </beans>
