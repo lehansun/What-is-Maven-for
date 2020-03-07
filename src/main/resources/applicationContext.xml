@@ -14,7 +14,8 @@
     </bean>
 
     <bean id="musicPlayer"
-          class="com.epam.brest.courses.MusicPlayer">
+          class="com.epam.brest.courses.MusicPlayer"
+          scope ="prototype" >
 
         <property name="musicList">
 
