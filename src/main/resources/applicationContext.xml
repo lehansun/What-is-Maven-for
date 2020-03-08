@@ -34,7 +34,10 @@
 <!--    </bean>-->
 
     <bean id="classicBean"
-          class="com.epam.brest.courses.ClassicMusic">
+          class="com.epam.brest.courses.ClassicMusic"
+          init-method="init"
+          destroy-method="destruction"
+          factory-method="getInstance">
     </bean>
 
     <bean id="popBean"

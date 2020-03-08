@@ -20,6 +20,10 @@ public class TestSpring {
 
         Music music3 = context.getBean("popBean", PopMusic.class);
 
+        Music classicMusic1 = context.getBean("classicBean", ClassicMusic.class);
+        Music classicMusic2 = context.getBean("classicBean", ClassicMusic.class);
+        Music classicMusic3 = context.getBean("classicBean", ClassicMusic.class);
+
 
 //        // Music testBean = context.getBean("musicBean",Music.class);
 //        MusicPlayer player = context.getBean("musicPlayer", MusicPlayer.class);
