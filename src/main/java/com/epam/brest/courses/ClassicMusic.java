@@ -10,13 +10,6 @@ public class ClassicMusic implements Music {
         return "Moon sonata";
     }
 
-    private ClassicMusic() {
-
-    }
-
-    public static ClassicMusic getInstance() {
-        return new ClassicMusic();
-    }
 
     public void init() {
         System.out.println("Classic initialization...");
