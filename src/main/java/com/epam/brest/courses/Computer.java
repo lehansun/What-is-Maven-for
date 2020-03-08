@@ -3,6 +3,8 @@ package com.epam.brest.courses;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import static com.epam.brest.courses.MusicGenre.ROCK;
+
 @Component
 public class Computer {
     private MusicPlayer musicPlayer;
@@ -16,6 +18,6 @@ public class Computer {
 
     @Override
     public String toString() {
-        return "Computer " + id + " " + musicPlayer.playMusic();
+        return "Computer " + id + " " + musicPlayer.playMusic(ROCK);
     }
 }

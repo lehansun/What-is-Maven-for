@@ -2,18 +2,22 @@ package com.epam.brest.courses;
 
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Component
 public class RockMusic implements Music {
+    private List<String> songs = new ArrayList<>(3);
+
+    {
+        songs.add("Wind cries Mary");
+        songs.add("Paint it black");
+        songs.add("Can't seem to make you mine");
+    }
+
     @Override
-    public String getSong() {
-        return "Wind of Change";
+    public List<String> getSongs() {
+        return songs;
     }
 
-    public void init() {
-        System.out.println("Rock initialization...");
-    }
-
-    public void destruction() {
-        System.out.println("Rock destruction...");
-    }
 }

@@ -2,20 +2,23 @@ package com.epam.brest.courses;
 
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Component
 public class ClassicMusic implements Music {
+    private List<String> songs = new ArrayList<>(3);
+
+    {
+        songs.add("Hungarian Rhapsody");
+        songs.add("Symphony no. 5 in C Minor, op. 67");
+        songs.add("Night on Bald Mountain");
+    }
+
 
     @Override
-    public String getSong() {
-        return "Moon sonata";
+    public List<String> getSongs() {
+        return songs;
     }
 
-
-    public void init() {
-        System.out.println("Classic initialization...");
-    }
-
-    public void destruction() {
-        System.out.println("Destruction of classic music player...");
-    }
 }
