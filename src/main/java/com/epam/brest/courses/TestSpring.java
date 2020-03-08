@@ -13,26 +13,12 @@ public class TestSpring {
                 "applicationContext.xml"
         );
 
-        Music music = context.getBean("popBean", PopMusic.class);
+        Music music = context.getBean("rockMusic", Music.class);
         System.out.println(music.getSong());
 
-        Music music2 = context.getBean("popBean", PopMusic.class);
-
-        Music music3 = context.getBean("popBean", PopMusic.class);
-
-        Music classicMusic1 = context.getBean("classicBean", ClassicMusic.class);
-        Music classicMusic2 = context.getBean("classicBean", ClassicMusic.class);
-        Music classicMusic3 = context.getBean("classicBean", ClassicMusic.class);
+        Music classicMusic = context.getBean("classicMusic", Music.class);
 
 
-//        // Music testBean = context.getBean("musicBean",Music.class);
-//        MusicPlayer player = context.getBean("musicPlayer", MusicPlayer.class);
-//        MusicPlayer secondPlayer = context.getBean("musicPlayer", MusicPlayer.class);
-//        player.playMusic();
-//        player.setName("First player");
-//        secondPlayer.playMusic();
-//        System.out.println(player.getName());
-//        System.out.println(secondPlayer.getName());
 
         context.close();
     }

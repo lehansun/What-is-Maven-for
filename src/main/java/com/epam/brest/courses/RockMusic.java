@@ -1,5 +1,8 @@
 package com.epam.brest.courses;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class RockMusic implements Music {
     @Override
     public String getSong() {
