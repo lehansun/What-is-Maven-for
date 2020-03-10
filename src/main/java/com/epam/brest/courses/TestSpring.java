@@ -12,8 +12,7 @@ public class TestSpring {
 //        System.out.println(computer);
 
         MusicPlayer player = context.getBean(MusicPlayer.class);
-
-        System.out.println(player.playMusic(MusicGenre.CLASSIC));
+        player.playMusic();
 
         Computer comp = context.getBean(Computer.class);
         System.out.println(comp);
